@@ -11,4 +11,11 @@ puts "team city: " + team_one.city
 puts "team sport: " + team_one.sport
 team_one.save
 
+team_two = Team.new(name: "Rockies", city: "Denver", sport: "Baseball")
+puts "team name: " + team_two.name
+puts "team city: " + team_two.city
+puts "team sport: " + team_two.sport
+team_two.save
+
+
 DB[:conn].execute("SELECT * FROM teams")
